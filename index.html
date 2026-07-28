@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our website is currently under construction. We are working hard to bring you a new and improved experience.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Under Construction | Coming Soon</title>
+    
+    <style>
+        /* Base Styles & Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Glassmorphism Container */
+        .container {
+            max-width: 750px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 50px;
+            border-radius: 15px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        /* Countdown Timer */
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 45px;
+        }
+
+        .time-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 110px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4facfe;
+        }
+
+        .time-box small {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #cbd5e1;
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* Newsletter Form */
+        .notify-form {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .notify-form input[type="email"] {
+            padding: 16px 25px;
+            width: 65%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .notify-form input[type="email"]::placeholder {
+            color: #94a3b8;
+        }
+
+        .notify-form input[type="email"]:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #4facfe;
+        }
+
+        .notify-form button {
+            padding: 16px 35px;
+            border: none;
+            border-radius: 8px;
+            background: #4facfe;
+            color: #1e293b;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .notify-form button:hover {
+            background: #00f2fe;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 650px) {
+            h1 { font-size: 2.2rem; }
+            .timer { gap: 10px; flex-wrap: wrap; }
+            .time-box { min-width: 90px; padding: 15px 10px; }
+            .notify-form { flex-direction: column; align-items: center; }
+            .notify-form input[type="email"], .notify-form button { width: 100%; max-width: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <h1>Under Construction</h1>
+        <p>We are currently working on creating something fantastic. We'll be here soon with a new and improved experience. Subscribe to be notified!</p>
+        
+        <!-- Timer -->
+        <div class="timer" id="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+
+        <!-- Subscription Form -->
+        <form class="notify-form" id="subscribeForm">
+            <input type="email" placeholder="Enter your email address..." required>
+            <button type="submit">Notify Me</button>
+        </form>
+    </main>
+
+    <script>
+        // Set a target date 15 days from now
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 15);
+
+        const timerInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            // Time calculations
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
