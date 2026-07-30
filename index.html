@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Septic Tanks UK | Installation, Maintenance & Emptying</title>
-    <!-- Modern Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Experiment | Fund Scientific Discoveries</title>
+    <!-- Modern, clean font for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #0A3A66; /* Deep trusted blue */
-            --primary-green: #228B22; /* Environmental green */
-            --accent-color: #FFB300; /* Attention/CTA color */
-            --text-dark: #333333;
-            --text-light: #F4F7F6;
-            --bg-light: #F8FAFC;
+            --primary-color: #212121; /* Dark text */
+            --brand-color: #00BFA5; /* Experiment signature teal/green */
+            --bg-light: #F9FAFB;
             --white: #FFFFFF;
+            --border-color: #E5E7EB;
+            --text-muted: #6B7280;
         }
 
         * {
@@ -26,8 +25,8 @@
 
         body {
             background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
+            color: var(--primary-color);
+            line-height: 1.5;
         }
 
         a {
@@ -35,390 +34,389 @@
             color: inherit;
         }
 
-        /* Top Contact Bar */
-        .top-bar {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 0.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-        }
-
-        .top-bar strong {
-            color: var(--accent-color);
-        }
-
-        /* Header & Navigation */
+        /* Header Navigation */
         header {
             background-color: var(--white);
-            padding: 1.5rem 5%;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary-blue);
+            letter-spacing: -0.5px;
+            color: var(--primary-color);
+        }
+
+        .nav-group {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .logo span {
-            color: var(--primary-green);
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
             gap: 2rem;
         }
 
-        .nav-links a {
-            font-weight: 600;
-            color: var(--text-dark);
-            transition: color 0.3s;
+        .search-bar {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-light);
+            font-size: 0.9rem;
+            width: 250px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-bar:focus {
+            border-color: var(--brand-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .nav-links a:hover {
-            color: var(--primary-green);
+            color: var(--brand-color);
         }
 
-        .btn-quote {
-            background-color: var(--primary-green);
+        .btn-start {
+            background-color: var(--brand-color);
             color: var(--white);
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
             font-weight: 600;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: background-color 0.2s;
         }
 
-        .btn-quote:hover {
-            background-color: #1a6b1a;
-            transform: translateY(-2px);
+        .btn-start:hover {
+            background-color: #009E89;
+            color: var(--white);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(10, 58, 102, 0.7), rgba(10, 58, 102, 0.7)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop') center/cover;
-            color: var(--white);
-            padding: 6rem 5%;
+            background-color: var(--white);
+            padding: 5rem 5%;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 500px;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .hero h1 {
             font-size: 3.5rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            max-width: 800px;
-            line-height: 1.2;
+            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.25rem;
+            color: var(--text-muted);
             max-width: 600px;
+            margin: 0 auto 2.5rem;
         }
 
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-color);
-            color: var(--primary-blue);
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: #e6a200;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--white);
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
             color: var(--white);
             padding: 1rem 2rem;
-            border-radius: 5px;
+            border-radius: 4px;
             font-weight: 600;
             font-size: 1.1rem;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.2s;
         }
 
-        .btn-secondary:hover {
-            background-color: var(--white);
-            color: var(--primary-blue);
+        .hero-btn:hover {
+            background-color: #374151;
         }
 
-        /* Services Section */
-        .services {
-            padding: 5rem 5%;
-            text-align: center;
+        /* Projects Section */
+        .projects-section {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
         }
 
-        .section-subtitle {
-            color: #666;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
-        .service-grid {
+        .view-all {
+            color: var(--brand-color);
+            font-weight: 500;
+        }
+
+        /* Grid Layout */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
 
-        .service-card {
+        /* Project Card */
+        .card {
             background-color: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-bottom: 4px solid var(--primary-green);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .service-card h3 {
-            font-size: 1.4rem;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
+        .card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
-        .service-card p {
-            color: #555;
-            margin-bottom: 1.5rem;
+        .card-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--brand-color);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
         }
 
-        /* Compliance Section */
-        .compliance {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 4rem 5%;
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .card-author {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-
-        .compliance-content {
-            max-width: 600px;
-        }
-
-        .compliance h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-
-        .compliance p {
-            font-size: 1.1rem;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
             margin-bottom: 1.5rem;
+        }
+
+        .author-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #D1D5DB;
+        }
+
+        /* Funding Progress */
+        .funding-wrapper {
+            margin-top: auto;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background-color: var(--bg-light);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 0.8rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--brand-color);
+            border-radius: 3px;
+        }
+
+        .funding-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .funding-stats span strong {
+            color: var(--primary-color);
+            font-size: 1rem;
         }
 
         /* Footer */
         footer {
-            background-color: #062340;
-            color: var(--text-light);
-            padding: 4rem 5% 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-col h3 {
-            color: var(--white);
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-col p, .footer-col ul {
-            font-size: 0.95rem;
-            color: #bdc3c7;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-col ul li a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-bottom {
-            grid-column: 1 / -1;
+            background-color: var(--white);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 5%;
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 2rem;
+            color: var(--text-muted);
             font-size: 0.9rem;
-            color: #7f8c8d;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links, .btn-quote {
-                display: none; /* Mobile menu requires JS, hidden for pure static layout */
+        /* Responsive */
+        @media (max-width: 900px) {
+            .search-bar {
+                display: none;
             }
             .hero h1 {
                 font-size: 2.5rem;
             }
-            .hero-btns {
-                flex-direction: column;
+        }
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
             }
-            .compliance {
-                flex-direction: column;
-                text-align: center;
+            .hero {
+                padding: 3rem 1rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Contact Bar -->
-    <div class="top-bar">
-        <span>Covering all of mainland UK</span>
-        <span>24/7 Emergency Response: <strong>0800 123 4567</strong></span>
-    </div>
-
     <!-- Header -->
     <header>
-        <div class="logo">
-            <!-- Simple SVG Icon for logo -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-            </svg>
-            Septic<span>Tanks</span>.uk
+        <a href="#" class="logo">Experiment</a>
+        <div class="nav-group">
+            <input type="text" class="search-bar" placeholder="Search for projects...">
+            <nav class="nav-links">
+                <a href="#">Discover</a>
+                <a href="#">Grants</a>
+                <a href="#">Log In</a>
+            </nav>
+            <a href="#" class="btn-start">Start a Project</a>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Installations</a></li>
-            <li><a href="#">Emptying & Servicing</a></li>
-            <li><a href="#">UK Regulations</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <a href="#" class="btn-quote">Get a Free Quote</a>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Banner -->
     <section class="hero">
-        <h1>Reliable Off-Mains Drainage Solutions Across the UK</h1>
-        <p>Expert installation, maintenance, and regular emptying of septic tanks and sewage treatment plants. Fully compliant with EA General Binding Rules.</p>
-        <div class="hero-btns">
-            <a href="#" class="btn-primary">Book a Survey</a>
-            <a href="#" class="btn-secondary">View Our Services</a>
-        </div>
+        <h1>Fund the next big scientific discovery</h1>
+        <p>Experiment is a crowdfunding platform for scientific research. Support the scientists pushing the boundaries of human knowledge.</p>
+        <a href="#" class="hero-btn">Explore Projects</a>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <h2 class="section-title">Our Expert Services</h2>
-        <p class="section-subtitle">Comprehensive wastewater management for domestic and commercial properties.</p>
-        
-        <div class="service-grid">
-            <!-- Service 1 -->
-            <div class="service-card">
-                <div class="service-icon">🏗️</div>
-                <h3>New Installations</h3>
-                <p>Professional sizing and installation of modern septic tanks and sewage treatment plants tailored to your property's ground conditions.</p>
-                <a href="#" style="color: var(--primary-green); font-weight: 600;">Learn more &rarr;</a>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="service-card">
-                <div class="service-icon">🚛</div>
-                <h3>Routine Emptying</h3>
-                <p>Scheduled desludging and emptying services to keep your system running smoothly and prevent costly emergency backups.</p>
-                <a href="#" style="color: var(--primary-green); font-weight: 600;">Learn more &rarr;</a>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="service-card">
-                <div class="service-icon">🔧</div>
-                <h3>Repairs & Maintenance</h3>
-                <p>Fast diagnostics and repairs for damaged pipework, soakaways, and failing dip pipes to ensure environmental safety.</p>
-                <a href="#" style="color: var(--primary-green); font-weight: 600;">Learn more &rarr;</a>
-            </div>
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="section-header">
+            <h2>Trending Projects</h2>
+            <a href="#" class="view-all">View all &rarr;</a>
         </div>
-    </section>
 
-    <!-- Compliance / Trust Section -->
-    <section class="compliance">
-        <div class="compliance-content">
-            <h2>Are You Compliant with the 2020 Regulations?</h2>
-            <p>The Environment Agency introduced new General Binding Rules affecting properties with off-mains drainage. If your septic tank discharges directly into a watercourse, you must upgrade your system.</p>
-            <p>Our experts offer free compliance checks and can advise on upgrading to a BS EN 12566 certified Sewage Treatment Plant.</p>
-            <br>
-            <a href="#" class="btn-primary" style="display: inline-block;">Check Your Compliance</a>
-        </div>
-        <div class="compliance-image">
-            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=400&auto=format&fit=crop" alt="Environment" style="border-radius: 10px; border: 4px solid var(--white);">
+        <div class="grid">
+            <!-- Project 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=800&auto=format&fit=crop" alt="Microbiology" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">Biology</span>
+                    <h3 class="card-title">Can we use engineered bacteria to break down microplastics in the ocean?</h3>
+                    <div class="card-author">
+                        <div class="author-avatar"></div>
+                        Dr. Sarah Jenkins
+                    </div>
+                    <div class="funding-wrapper">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                        <div class="funding-stats">
+                            <span><strong>85%</strong> funded</span>
+                            <span><strong>$8,500</strong> pledged</span>
+                            <span><strong>12</strong> days left</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800&auto=format&fit=crop" alt="Astronomy" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">Astronomy</span>
+                    <h3 class="card-title">Mapping exoplanets using citizen science and small ground-based telescopes.</h3>
+                    <div class="card-author">
+                        <div class="author-avatar"></div>
+                        Astrophysics Research Group
+                    </div>
+                    <div class="funding-wrapper">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        <div class="funding-stats">
+                            <span><strong>112%</strong> funded</span>
+                            <span><strong>$14,200</strong> pledged</span>
+                            <span><strong>Funded</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop" alt="Chemistry" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">Chemistry</span>
+                    <h3 class="card-title">Developing sustainable, non-toxic dyes from agricultural waste products.</h3>
+                    <div class="card-author">
+                        <div class="author-avatar"></div>
+                        Marcus Chen
+                    </div>
+                    <div class="funding-wrapper">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%;"></div>
+                        </div>
+                        <div class="funding-stats">
+                            <span><strong>45%</strong> funded</span>
+                            <span><strong>$3,150</strong> pledged</span>
+                            <span><strong>21</strong> days left</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop" alt="Ecology" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">Ecology</span>
+                    <h3 class="card-title">How do urban noise levels affect the mating calls of local songbirds?</h3>
+                    <div class="card-author">
+                        <div class="author-avatar"></div>
+                        Elena Rodriguez
+                    </div>
+                    <div class="funding-wrapper">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                        <div class="funding-stats">
+                            <span><strong>60%</strong> funded</span>
+                            <span><strong>$2,400</strong> pledged</span>
+                            <span><strong>18</strong> days left</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-col">
-            <h3>SepticTanks.uk.com</h3>
-            <p>The UK's trusted partner for off-grid drainage solutions, protecting your property and the local environment.</p>
-        </div>
-        <div class="footer-col">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Septic Tank Installation</a></li>
-                <li><a href="#">Sewage Treatment Plants</a></li>
-                <li><a href="#">Drainage Fields (Soakaways)</a></li>
-                <li><a href="#">General Binding Rules</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h3>Contact Us</h3>
-            <ul>
-                <li>📍 Head Office: London, UK</li>
-                <li>📞 0800 123 4567</li>
-                <li>✉️ info@septic-tanks.uk.com</li>
-                <li>🕒 Mon-Fri: 8am - 6pm (24/7 Emergencies)</li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Septic Tanks UK Ltd. Beautifully designed static HTML template.</p>
-        </div>
+        <p>&copy; 2026 Experiment Clone. Designed beautifully as requested.</p>
     </footer>
 
 </body>
